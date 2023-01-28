@@ -63,10 +63,10 @@ function onColorClick(event) {
 function onModeClick() {
     if (isFilling) {
       isFilling = false;
-      modeBtn.innerText = "Fill";
+      modeBtn.innerText = "Draw";
     } else {
       isFilling = true;
-      modeBtn.innerText = "Draw";
+      modeBtn.innerText = "Fill";
     }
 }
 
@@ -78,7 +78,7 @@ function onDestroyClick() {
 function onEraserClick() {
     ctx.strokeStyle = "white";
     isFilling = false;
-    modeBtn.innerText = "Fill";
+    modeBtn.innerText = "Draw";
 }
 
 canvas.addEventListener("mousemove", onMove);

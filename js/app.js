@@ -37,6 +37,13 @@ function cancelPainting() {
     ctx.beginPath();
 }
 
+  
+function onCanvasClick() {
+    if (isFilling) {
+        ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+    }
+}
+
 function onLineWidthChange(event) {
     ctx.lineWidth = event.target.value;
 }
@@ -60,12 +67,6 @@ function onModeClick() {
     } else {
       isFilling = true;
       modeBtn.innerText = "Draw";
-    }
-}
-  
-function onCanvasClick() {
-    if (isFilling) {
-        ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
     }
 }
 
